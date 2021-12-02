@@ -9,7 +9,7 @@ export const Countrt = () =>{
     
     const mul =()=>  seqtc(count+((count+1)*count))
     
-    const clr =()=>  seqtc(0)
+    const clr =()=>  seqtc(count+1-count-1)
 
     return(
         <div>
