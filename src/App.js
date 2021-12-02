@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { BikePerent } from './Component/bikeMapping/BikePerent';
+import ConditionalRendring from './Component/conditionalRender/ConditionalRendring';
+import { Counter } from './Component/conter/Counter';
+import { Countrt } from './Component/counter2/CounterPractice';
+// import MapingParent from './Component/MapingParent';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <MapingParent/> */}
+      {/* <BikePerent/> */}
+      {/* <Counter/> */}
+      {/* <Countrt/> */}
+      {/* <ConditionalRendring/> */}
+      
     </div>
   );
 }
