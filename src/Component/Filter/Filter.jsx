@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import {Row, Col, Button} from "react-bootstrap"
 import { Data } from "./data";
 import FilterChild from "./FilterChild";
@@ -12,7 +12,9 @@ export const Filter =()=>{
         setfilt(result)
         else setfilt(Data)
     }
-
+    useEffect(()=>{
+        
+    },[])
     return(
         <div>
             <Row>

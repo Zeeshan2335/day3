@@ -1,0 +1,21 @@
+.input{
+    border-style: groove 1px;
+    margin-right: 5px;
+}
+
+.input:hover{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.input:active{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+.input::after{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
