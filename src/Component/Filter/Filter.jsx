@@ -7,7 +7,7 @@ export const Filter =()=>{
     const [filt,setfilt]= useState(Data)
     const [search,setSearch]=useState("")
     const handelS= ()=>{
-        const result=Data.filter((elem)=>elem.name=== search)
+        const result=Data.filter((elem)=>elem.name.toUpperCase().includes( search.toUpperCase()))
         if(search !=="")
         setfilt(result)
         else setfilt(Data)
