@@ -1,0 +1,13 @@
+.nav{
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+
+}
+
+.nav a{
+    text-decoration: none;
+    padding: 10px;
+
+}

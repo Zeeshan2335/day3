@@ -1,34 +1,34 @@
-// import React,{useState} from 'react';
+import React,{useState} from 'react';
 
-// const ConditionalRendring = () => {
+const ConditionalRendring = () => {
 
   
-//         const [show,setShoe]=useState(false)
+        const [show,setShoe]=useState(false)
 
 
-//         // second way ka hai hissa
-//         // const handel = () =>{
-//         //     setShoe(!show)
-//         // }
+        // second way ka hai hissa
+        // const handel = () =>{
+        //     setShoe(!show)
+        // }
 
     
 
-//     return (
-//         <div>
-//              {show?<div>one</div> :<div>two</div>}
+    return (
+        <div>
+             {show?<div>one</div> :<div>two</div>}
 
-//              {/* secon way */}
-//              {/* <button onClick={handel}>toggle</button> */}
+             {/* secon way */}
+             {/* <button onClick={handel}>toggle</button> */}
             
 
-//             {/* inline way  uper ka const ---[show,setShoe]=useState(false)--- hona zaroori hai */}
-//             <button onClick={()=>setShoe(!show)}>toggle</button>
+            {/* inline way  uper ka const ---[show,setShoe]=useState(false)--- hona zaroori hai */}
+            <button onClick={()=>setShoe(!show)}>toggle</button>
 
-//         </div>
-//     );
-// };
+        </div>
+    );
+};
 
-// export default ConditionalRendring;
+export default ConditionalRendring;
 
 
 

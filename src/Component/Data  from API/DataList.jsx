@@ -1,16 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { FData } from "./SearchData";
-import "./Cars.css"
+import axios from "axios"
 
 
-export const Cars = () => {
-    const [propt, setpro] = useState(FData.data);
+export const DataLIst = () => {
+    const [data,setdata]=useState([])
+    const [propt, setpro] = useState(data);
     const [text, setText] = useState("");
     const handelF = () => {
-        const filt = FData.data.filter((elem) => elem.name.toUpperCase().includes(text.toUpperCase()))
-        text !== "" ? setpro(filt) : setpro(FData.data)
+        const filt = data.filter((elem) => elem.title.toUpperCase().includes(text.toUpperCase()))
+        text !== "" ? setpro(filt) : setpro(data)
     }
-    useEffect(()=>{handelF()},[text]);//isse automayic search hota jaise hi typing start kare yane button click ki zarorat nahi 
+    const calldata = async ()=>{
+        const res = await axios.get("https://fakestoreapi.com/products");
+            setdata(res.data)
+        
+    }
+    useEffect(()=>{
+        calldata()
+    },[])
+    useEffect(()=>{handelF()},[text,data]);//isse automayic search hota jaise hi typing start kare yane button click ki zarorat nahi 
     return (
         <div>
             <div>
@@ -32,10 +40,10 @@ export const Cars = () => {
                 {propt.map((item) => {
                     return (
                         <div >
-                            <img width="420px" src={item.url} alt="" />
-                            <h3> <b>{item.name} </b></h3>
+                            <img width="220px" src={item.image} alt="" />
+                            <h3> <b>{item.title} </b></h3>
                             <h4>Price: <b>{item.price}</b></h4>
-                            <h4>Type: {item.type} </h4>
+                            <h4>Type: {item.description} </h4>
                         </div>
                     )
                 })}
