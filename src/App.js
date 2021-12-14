@@ -1,5 +1,7 @@
 import './App.css';
 import {BrowserRouter,Routes,Route} from "react-router-dom"
+import { Provider } from "react-redux";
+import { configStore } from './App-State/store/configStore';
 import { CounterInClacc } from './ClassComponent/CounterWithChild/CounterInClass';
 import { Appi } from './Component/Data  from API/Api';
 import { ApiPractice } from './Component/Data  from API/ApiPractice';
@@ -14,15 +16,22 @@ import { NavBar } from './Navigation/NavBar';
 import StateWithMap from './Component/useState/StateWithMap';
 import { UseState } from './Component/useState/UseState';
 import MapingParent from './Component/MapingParent';
+import CheckRedux from './Component/CheckRedux';
+import ReduxPractice from './Component/redux/ReduxPractice';
 
 function App() {
+  const localStore= configStore()
   return (
+
     <div className="App">
+      <Provider store={localStore}>
    <BrowserRouter>
    <NavBar/>
    <Routes>
      <Route path="/" element={<Cars/>}/>
      <Route path="/data" element={<UseState/>}/>
+     <Route path="/prac" element={<ReduxPractice/>}/>
+     <Route path="/redux" element={<CheckRedux/>}/>
      <Route path="/filter" element={<Filter/>}/>
      <Route path="/counter" element={<Counter/>}/>
      <Route path="/counter2" element={<Countrt/>}/>
@@ -35,6 +44,7 @@ function App() {
      <Route path="/DataLIst" element={<DataLIst/>}  />
    </Routes>
    </BrowserRouter>
+   </Provider>
     </div>
   );
 }

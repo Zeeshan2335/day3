@@ -7,6 +7,8 @@ export const NavBar =()=>{
     return(
         <div className="nav">
             <Link to="/">Home</Link>
+            <Link to="/redux">redux</Link>
+            <Link to="/prac">Redux Practice</Link>
             <Link to="/data">UseState</Link>
             <Link to="/filter">Filter</Link>
             <Link to="/counter">counter</Link>
