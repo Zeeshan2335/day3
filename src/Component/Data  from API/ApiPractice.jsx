@@ -1,13 +1,27 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch,useSelector } from "react-redux";
 import axios from "axios";
 
 export const ApiPractice = () => {
+    const selpro = useSelector((state)=>state.productReducer.products)
+    const dispatch = useDispatch()
     const [user, setUser] = useState([])
+
+    const getData = async ()=>{
+        if (selpro){
+            setUser(selpro)
+        } else {
+        const result = await axios.get("https://jsonplaceholder.typicode.com/users")
+        setUser(result.data)
+        dispatch({
+            type:"ADD_PRODUCTS",
+            data: result.data
+        })
+    }
+    }
     useEffect(() => {
-        axios.get("https://jsonplaceholder.typicode.com/users")
-            .then((respounce) => setUser(respounce.data))
-
-
+        
+            getData()
     }, [])
 
     return (
