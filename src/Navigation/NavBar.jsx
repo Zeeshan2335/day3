@@ -7,7 +7,11 @@ export const NavBar =()=>{
     return(
         <div className="nav">
             <Link to="/">Home</Link>
-            <Link to="/ts">test</Link>
+            <Link to="/geo">GeoCode</Link>
+            <Link to="/tim">Timer in Functional</Link>
+            <Link to="/cla">clss timer</Link>
+            <Link to="/use">Use Ref</Link>
+            <Link to="/e">test</Link>
             <Link to="/redux">redux</Link>
             <Link to="/prac">Redux Practice</Link>
             <Link to="/data">UseState</Link>

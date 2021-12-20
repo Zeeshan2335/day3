@@ -19,6 +19,10 @@ import MapingParent from './Component/MapingParent';
 import CheckRedux from './Component/redux/CheckRedux';
 import ReduxPractice from './Component/redux/ReduxPractice';
 import Test from './Component/Test/Test';
+import UseREff from './Component/useRef/UseREff';
+import { ClassTimer } from './Component/useRef/ClassTimer';
+import TimerFunctional from './Component/useRef/TimerFunctional';
+import GeoCode from './Component/Geocode/GeoCode';
 
 function App() {
   const localStore= configStore()
@@ -30,7 +34,11 @@ function App() {
    <NavBar/>
    <Routes>
      <Route path="/" element={<Cars/>}/>
-     <Route path="/" element={<Test/>}/>
+     <Route path="/geo" element={<GeoCode/>}/>
+     <Route path="/tim" element={<TimerFunctional/>}/>
+     <Route path="/cla" element={<ClassTimer/>}/>
+     <Route path="/e" element={<Test/>}/>
+     <Route path="/use" element={<UseREff/> }/>
      <Route path="/data" element={<UseState/>}/>
      <Route path="/prac" element={<ReduxPractice/>}/>
      <Route path="/redux" element={<CheckRedux/>}/>
